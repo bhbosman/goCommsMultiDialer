@@ -13,7 +13,7 @@ require (
 )
 
 require (
-	github.com/bhbosman/gocomms v0.0.0-20220611042959-112035f663a7 // indirect
+	github.com/bhbosman/gocomms v0.0.0-20220802123532-201eb833272c // indirect
 	github.com/bhbosman/goerrors v0.0.0-20220623084908-4d7bbcd178cf // indirect
 	github.com/bhbosman/gomessageblock v0.0.0-20220617132215-32f430d7de62 // indirect
 	github.com/bhbosman/goprotoextra v0.0.1 // indirect
