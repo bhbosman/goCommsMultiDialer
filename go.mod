@@ -2,10 +2,9 @@ module github.com/bhbosman/goCommsMultiDialer
 
 go 1.18
 
-
 require (
-	github.com/bhbosman/goCommsDefinitions v0.0.0-20220718082038-833ca2ad99e2
-	github.com/bhbosman/goCommsNetDialer v0.0.0-00010101000000-000000000000
+	github.com/bhbosman/goCommsDefinitions v0.0.0-20220801175552-c5aa68065af3
+	github.com/bhbosman/goCommsNetDialer v0.0.0-20220726130315-bec9f09e45e7
 	github.com/bhbosman/goConnectionManager v0.0.0-20220721070628-0f4b3c036d93
 	github.com/bhbosman/gocommon v0.0.0-20220718213201-2711fee77ae4
 	github.com/cskr/pubsub v1.0.2
