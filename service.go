@@ -147,14 +147,6 @@ func (self *service) goStart(instanceData INetMultiDialerData) {
 			return len(self.cmdChannel) + self.subscribeChannel.Count()
 		},
 		goCommsDefinitions.CreateTryNextFunc(self.cmdChannel),
-		//func(i interface{}) {
-		//	select {
-		//	case self.cmdChannel <- i:
-		//		break
-		//	default:
-		//		break
-		//	}
-		//},
 	)
 loop:
 	for {
