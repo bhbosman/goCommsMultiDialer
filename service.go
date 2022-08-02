@@ -27,7 +27,7 @@ type service struct {
 	state               IFxService.State
 	pubSub              *pubsub.PubSub
 	goFunctionCounter   GoFunctionCounter.IService
-	subscribeChannel    *pubsub.ChannelSubscription
+	subscribeChannel    *pubsub.NextFuncSubscription
 	connectionManager   goConnectionManager.IService
 	UniqueSessionNumber interfaces.IUniqueReferenceService
 }
@@ -118,7 +118,7 @@ func (self *service) goStart(instanceData INetMultiDialerData) {
 		}
 	}(self.cmdChannel)
 
-	self.subscribeChannel = pubsub.NewChannelSubscription(32)
+	self.subscribeChannel = pubsub.NewNextFuncSubscription(goCommsDefinitions.CreateNextFunc(self.cmdChannel))
 	self.pubSub.AddSub(self.subscribeChannel, self.ServiceName())
 
 	channelHandlerCallback := ChannelHandler.CreateChannelHandlerCallback(
@@ -160,14 +160,6 @@ loop:
 			}
 			break loop
 		case event, ok := <-self.cmdChannel:
-			if !ok {
-				return
-			}
-			breakLoop, err := channelHandlerCallback(event)
-			if err != nil || breakLoop {
-				break loop
-			}
-		case event, ok := <-self.subscribeChannel.Data:
 			if !ok {
 				return
 			}
