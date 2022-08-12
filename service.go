@@ -37,18 +37,18 @@ func (self *service) Dial(
 	socksUrl *url.URL,
 	connectionUrl *url.URL,
 	releaseFunc func(),
+	CancellationContext goCommsDefinitions.ICancellationContext,
 	connectionName string,
 	connectionPrefix string,
 	options ...fx.Option,
-) (messages.IApp, goCommsDefinitions.ICancellationContext, error) {
-	Options := &goCommsNetDialer.DialAppSettings{}
+) (messages.IApp, goCommsDefinitions.ICancellationContext, string, error) {
 	dialManager, err := goCommsNetDialer.NewMultiNetDialManager(
 		isSocksConnection,
 		socksUrl,
 		connectionUrl,
 		self.connectionManager,
 		self.ctx,
-		Options,
+		CancellationContext,
 		self.Logger,
 		self.UniqueSessionNumber,
 		connectionName,
@@ -58,14 +58,14 @@ func (self *service) Dial(
 		}, self.goFunctionCounter,
 	)
 	if err != nil {
-		return nil, nil, err
+		return nil, nil, "", err
 	}
 
-	dial, g, err := dialManager.Dial(releaseFunc)
+	dial, g, s, err := dialManager.Dial(releaseFunc)
 	if err != nil {
-		return nil, nil, err
+		return nil, nil, "", err
 	}
-	return dial, g, nil
+	return dial, g, s, nil
 }
 
 func (self *service) Send(message interface{}) error {
@@ -175,7 +175,7 @@ func (self *service) State() IFxService.State {
 	return self.state
 }
 
-func (self service) ServiceName() string {
+func (self *service) ServiceName() string {
 	return "NetMultiDialer"
 }
 

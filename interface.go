@@ -22,10 +22,11 @@ type INetMultiDialerService interface {
 		socksUrl *url.URL,
 		connectionUrl *url.URL,
 		releaseFunc func(),
+		CancellationContext goCommsDefinitions.ICancellationContext,
 		connectionName string,
 		connectionPrefix string,
 		options ...fx.Option,
-	) (messages.IApp, goCommsDefinitions.ICancellationContext, error)
+	) (messages.IApp, goCommsDefinitions.ICancellationContext, string, error)
 }
 
 type INetMultiDialerData interface {
