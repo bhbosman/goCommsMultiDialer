@@ -8,10 +8,10 @@ import (
 	"github.com/bhbosman/gocommon/ChannelHandler"
 	"github.com/bhbosman/gocommon/GoFunctionCounter"
 	"github.com/bhbosman/gocommon/Services/IFxService"
-	"github.com/bhbosman/gocommon/Services/ISendMessage"
 	"github.com/bhbosman/gocommon/Services/interfaces"
 	"github.com/bhbosman/gocommon/messages"
 	"github.com/bhbosman/gocommon/pubSub"
+	"github.com/bhbosman/gocommon/services/ISendMessage"
 	"github.com/cskr/pubsub"
 	"go.uber.org/fx"
 	"go.uber.org/zap"
@@ -27,7 +27,7 @@ type service struct {
 	state               IFxService.State
 	pubSub              *pubsub.PubSub
 	goFunctionCounter   GoFunctionCounter.IService
-	subscribeChannel    *pubsub.ChannelSubscription
+	subscribeChannel    *pubsub.NextFuncSubscription
 	connectionManager   goConnectionManager.IService
 	UniqueSessionNumber interfaces.IUniqueReferenceService
 }
@@ -37,18 +37,18 @@ func (self *service) Dial(
 	socksUrl *url.URL,
 	connectionUrl *url.URL,
 	releaseFunc func(),
+	CancellationContext goCommsDefinitions.ICancellationContext,
 	connectionName string,
 	connectionPrefix string,
 	options ...fx.Option,
-) (messages.IApp, goCommsDefinitions.ICancellationContext, error) {
-	Options := &goCommsNetDialer.DialAppSettings{}
+) (messages.IApp, goCommsDefinitions.ICancellationContext, string, error) {
 	dialManager, err := goCommsNetDialer.NewMultiNetDialManager(
 		isSocksConnection,
 		socksUrl,
 		connectionUrl,
 		self.connectionManager,
 		self.ctx,
-		Options,
+		CancellationContext,
 		self.Logger,
 		self.UniqueSessionNumber,
 		connectionName,
@@ -58,14 +58,14 @@ func (self *service) Dial(
 		}, self.goFunctionCounter,
 	)
 	if err != nil {
-		return nil, nil, err
+		return nil, nil, "", err
 	}
 
-	dial, g, err := dialManager.Dial(releaseFunc)
+	dial, g, s, err := dialManager.Dial(releaseFunc)
 	if err != nil {
-		return nil, nil, err
+		return nil, nil, "", err
 	}
-	return dial, g, nil
+	return dial, g, s, nil
 }
 
 func (self *service) Send(message interface{}) error {
@@ -118,7 +118,7 @@ func (self *service) goStart(instanceData INetMultiDialerData) {
 		}
 	}(self.cmdChannel)
 
-	self.subscribeChannel = pubsub.NewChannelSubscription(32)
+	self.subscribeChannel = pubsub.NewNextFuncSubscription(goCommsDefinitions.CreateNextFunc(self.cmdChannel))
 	self.pubSub.AddSub(self.subscribeChannel, self.ServiceName())
 
 	channelHandlerCallback := ChannelHandler.CreateChannelHandlerCallback(
@@ -147,14 +147,6 @@ func (self *service) goStart(instanceData INetMultiDialerData) {
 			return len(self.cmdChannel) + self.subscribeChannel.Count()
 		},
 		goCommsDefinitions.CreateTryNextFunc(self.cmdChannel),
-		//func(i interface{}) {
-		//	select {
-		//	case self.cmdChannel <- i:
-		//		break
-		//	default:
-		//		break
-		//	}
-		//},
 	)
 loop:
 	for {
@@ -175,14 +167,6 @@ loop:
 			if err != nil || breakLoop {
 				break loop
 			}
-		case event, ok := <-self.subscribeChannel.Data:
-			if !ok {
-				return
-			}
-			breakLoop, err := channelHandlerCallback(event)
-			if err != nil || breakLoop {
-				break loop
-			}
 		}
 	}
 }
@@ -191,7 +175,7 @@ func (self *service) State() IFxService.State {
 	return self.state
 }
 
-func (self service) ServiceName() string {
+func (self *service) ServiceName() string {
 	return "NetMultiDialer"
 }
 
