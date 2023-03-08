@@ -3,10 +3,10 @@ module github.com/bhbosman/goCommsMultiDialer
 go 1.18
 
 require (
-	github.com/bhbosman/goCommsDefinitions v0.0.0-20230302063431-887458f90947
+	github.com/bhbosman/goCommsDefinitions v0.0.0-20230307073322-f15f4b951cb9
 	github.com/bhbosman/goCommsNetDialer v0.0.0-20230302062228-c88685956b15
 	github.com/bhbosman/goConnectionManager v0.0.0-20230302065222-d613f6fe8f80
-	github.com/bhbosman/gocommon v0.0.0-20230302071906-9b559c4a3731
+	github.com/bhbosman/gocommon v0.0.0-20230308114127-b5a97171c205
 	github.com/cskr/pubsub v1.0.2
 	go.uber.org/fx v1.19.2
 	go.uber.org/zap v1.23.0
@@ -17,7 +17,7 @@ require (
 	github.com/bhbosman/goerrors v0.0.0-20220623084908-4d7bbcd178cf // indirect
 	github.com/bhbosman/gomessageblock v0.0.0-20220617132215-32f430d7de62 // indirect
 	github.com/bhbosman/goprotoextra v0.0.1 // indirect
-	github.com/cenkalti/backoff/v4 v4.0.0 // indirect
+	github.com/cenkalti/backoff/v4 v4.1.1 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/emirpasic/gods v1.12.0 // indirect
 	github.com/golang/mock v1.6.0 // indirect
