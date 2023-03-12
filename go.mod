@@ -3,7 +3,7 @@ module github.com/bhbosman/goCommsMultiDialer
 go 1.18
 
 require (
-	github.com/bhbosman/goCommsDefinitions v0.0.0-20230307073322-f15f4b951cb9
+	github.com/bhbosman/goCommsDefinitions v0.0.0-20230308211643-24fe88b2378e
 	github.com/bhbosman/goCommsNetDialer v0.0.0-20230302062228-c88685956b15
 	github.com/bhbosman/goConnectionManager v0.0.0-20230302065222-d613f6fe8f80
 	github.com/bhbosman/gocommon v0.0.0-20230308114127-b5a97171c205

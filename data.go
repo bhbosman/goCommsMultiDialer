@@ -6,7 +6,7 @@ import (
 )
 
 type data struct {
-	MessageRouter *messageRouter.MessageRouter
+	MessageRouter messageRouter.IMessageRouter
 }
 
 func (self *data) Send(message interface{}) error {
@@ -25,7 +25,7 @@ func newData() (INetMultiDialerData, error) {
 	result := &data{
 		MessageRouter: messageRouter.NewMessageRouter(),
 	}
-	result.MessageRouter.Add(result.handleEmptyQueue)
+	_ = result.MessageRouter.Add(result.handleEmptyQueue)
 	//
 	return result, nil
 }
