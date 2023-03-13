@@ -12,6 +12,7 @@ import (
 	"github.com/bhbosman/gocommon/messages"
 	"github.com/bhbosman/gocommon/pubSub"
 	"github.com/bhbosman/gocommon/services/ISendMessage"
+	"github.com/bhbosman/gocomms/common"
 	"github.com/cskr/pubsub"
 	"go.uber.org/fx"
 	"go.uber.org/zap"
@@ -37,11 +38,11 @@ func (self *service) Dial(
 	socksUrl *url.URL,
 	connectionUrl *url.URL,
 	releaseFunc func(),
-	CancellationContext goCommsDefinitions.ICancellationContext,
+	CancellationContext common.ICancellationContext,
 	connectionName string,
 	connectionPrefix string,
 	options ...fx.Option,
-) (messages.IApp, goCommsDefinitions.ICancellationContext, string, error) {
+) (messages.IApp, common.ICancellationContext, string, error) {
 	dialManager, err := goCommsNetDialer.NewMultiNetDialManager(
 		isSocksConnection,
 		socksUrl,
