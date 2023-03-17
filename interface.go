@@ -1,11 +1,11 @@
 package goCommsMultiDialer
 
 import (
+	"github.com/bhbosman/goConn"
 	"github.com/bhbosman/gocommon/Services/IDataShutDown"
 	"github.com/bhbosman/gocommon/Services/IFxService"
 	"github.com/bhbosman/gocommon/messages"
 	"github.com/bhbosman/gocommon/services/ISendMessage"
-	"github.com/bhbosman/gocomms/common"
 	"go.uber.org/fx"
 	"net/url"
 )
@@ -22,11 +22,11 @@ type INetMultiDialerService interface {
 		socksUrl *url.URL,
 		connectionUrl *url.URL,
 		releaseFunc func(),
-		CancellationContext common.ICancellationContext,
+		CancellationContext goConn.ICancellationContext,
 		connectionName string,
 		connectionPrefix string,
 		options ...fx.Option,
-	) (messages.IApp, common.ICancellationContext, string, error)
+	) (messages.IApp, goConn.ICancellationContext, string, error)
 }
 
 type INetMultiDialerData interface {
