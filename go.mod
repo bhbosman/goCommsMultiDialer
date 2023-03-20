@@ -9,10 +9,10 @@ require (
 	github.com/bhbosman/gocommon v0.0.0-20230312205650-25cf8341f1c9
 	github.com/cskr/pubsub v1.0.2
 	go.uber.org/fx v1.19.2
-	go.uber.org/zap v1.23.0
+	go.uber.org/zap v1.24.0
 )
 
-require github.com/bhbosman/goConn v0.0.0-20230317052122-2eec27fd9bc8 // indirect
+require github.com/bhbosman/goConn v0.0.0-20230317052122-2eec27fd9bc8
 
 require (
 	github.com/bhbosman/gocomms v0.0.0-20220802123532-201eb833272c // indirect
