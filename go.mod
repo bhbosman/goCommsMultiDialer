@@ -3,7 +3,7 @@ module github.com/bhbosman/goCommsMultiDialer
 go 1.18
 
 require (
-	github.com/bhbosman/goCommsDefinitions v0.0.0-20230313180751-41613a6b3173
+	//github.com/bhbosman/goCommsDefinitions v0.0.0-20230313180751-41613a6b3173
 	github.com/bhbosman/goCommsNetDialer v0.0.0-20230302062228-c88685956b15
 	github.com/bhbosman/goConnectionManager v0.0.0-20230312204225-183859f3cef5
 	github.com/bhbosman/gocommon v0.0.0-20230320083256-4088c43f62a7
@@ -58,7 +58,7 @@ replace github.com/bhbosman/goCommsNetDialer => ../goCommsNetDialer
 
 replace github.com/bhbosman/goCommsNetListener => ../goCommsNetListener
 
-replace github.com/bhbosman/goCommsDefinitions => ../goCommsDefinitions
+//replace github.com/bhbosman/goCommsDefinitions => ../goCommsDefinitions
 
 replace github.com/bhbosman/goFxApp => ../goFxApp
 
