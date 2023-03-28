@@ -6,7 +6,7 @@ require (
 	github.com/bhbosman/goCommsDefinitions v0.0.0-20230313180751-41613a6b3173
 	github.com/bhbosman/goCommsNetDialer v0.0.0-20230302062228-c88685956b15
 	github.com/bhbosman/goConnectionManager v0.0.0-20230312204225-183859f3cef5
-	github.com/bhbosman/gocommon v0.0.0-20230328150634-566a0f916878
+	github.com/bhbosman/gocommon v0.0.0-20230328205958-d21444a729d1
 	github.com/cskr/pubsub v1.0.2
 	go.uber.org/fx v1.19.2
 	go.uber.org/zap v1.24.0
@@ -49,8 +49,6 @@ replace github.com/rivo/tview => github.com/bhbosman/tview v0.0.0-20230310100135
 replace github.com/bhbosman/gocomms => ../gocomms
 
 replace github.com/bhbosman/goFxAppManager => ../goFxAppManager
-
-//replace github.com/bhbosman/gocommon => ../gocommon
 
 replace github.com/bhbosman/goCommsStacks => ../goCommsStacks
 
