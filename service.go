@@ -4,8 +4,8 @@ import (
 	"context"
 	"github.com/bhbosman/goCommsDefinitions"
 	"github.com/bhbosman/goCommsNetDialer"
-	"github.com/bhbosman/goConn"
 	"github.com/bhbosman/goConnectionManager"
+	"github.com/bhbosman/gocommon"
 	"github.com/bhbosman/gocommon/ChannelHandler"
 	"github.com/bhbosman/gocommon/GoFunctionCounter"
 	"github.com/bhbosman/gocommon/pubSub"
@@ -37,11 +37,11 @@ func (self *service) Dial(
 	socksUrl *url.URL,
 	connectionUrl *url.URL,
 	releaseFunc func(),
-	CancellationContext goConn.ICancellationContext,
+	CancellationContext gocommon.ICancellationContext,
 	connectionName string,
 	connectionPrefix string,
 	options ...fx.Option,
-) (goConn.IApp, goConn.ICancellationContext, string, error) {
+) (gocommon.IApp, gocommon.ICancellationContext, string, error) {
 	dialManager, err := goCommsNetDialer.NewMultiNetDialManager(
 		isSocksConnection,
 		socksUrl,

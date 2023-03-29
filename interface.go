@@ -1,7 +1,7 @@
 package goCommsMultiDialer
 
 import (
-	"github.com/bhbosman/goConn"
+	"github.com/bhbosman/gocommon"
 	"github.com/bhbosman/gocommon/services/IDataShutDown"
 	"github.com/bhbosman/gocommon/services/IFxService"
 	"github.com/bhbosman/gocommon/services/ISendMessage"
@@ -21,11 +21,11 @@ type INetMultiDialerService interface {
 		socksUrl *url.URL,
 		connectionUrl *url.URL,
 		releaseFunc func(),
-		CancellationContext goConn.ICancellationContext,
+		CancellationContext gocommon.ICancellationContext,
 		connectionName string,
 		connectionPrefix string,
 		options ...fx.Option,
-	) (goConn.IApp, goConn.ICancellationContext, string, error)
+	) (gocommon.IApp, gocommon.ICancellationContext, string, error)
 }
 
 type INetMultiDialerData interface {
