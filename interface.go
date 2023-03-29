@@ -2,7 +2,6 @@ package goCommsMultiDialer
 
 import (
 	"github.com/bhbosman/goConn"
-	"github.com/bhbosman/gocommon/messages"
 	"github.com/bhbosman/gocommon/services/IDataShutDown"
 	"github.com/bhbosman/gocommon/services/IFxService"
 	"github.com/bhbosman/gocommon/services/ISendMessage"
@@ -26,7 +25,7 @@ type INetMultiDialerService interface {
 		connectionName string,
 		connectionPrefix string,
 		options ...fx.Option,
-	) (messages.IApp, goConn.ICancellationContext, string, error)
+	) (goConn.IApp, goConn.ICancellationContext, string, error)
 }
 
 type INetMultiDialerData interface {

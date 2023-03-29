@@ -8,7 +8,6 @@ import (
 	"github.com/bhbosman/goConnectionManager"
 	"github.com/bhbosman/gocommon/ChannelHandler"
 	"github.com/bhbosman/gocommon/GoFunctionCounter"
-	"github.com/bhbosman/gocommon/messages"
 	"github.com/bhbosman/gocommon/pubSub"
 	"github.com/bhbosman/gocommon/services/IFxService"
 	"github.com/bhbosman/gocommon/services/ISendMessage"
@@ -42,7 +41,7 @@ func (self *service) Dial(
 	connectionName string,
 	connectionPrefix string,
 	options ...fx.Option,
-) (messages.IApp, goConn.ICancellationContext, string, error) {
+) (goConn.IApp, goConn.ICancellationContext, string, error) {
 	dialManager, err := goCommsNetDialer.NewMultiNetDialManager(
 		isSocksConnection,
 		socksUrl,
