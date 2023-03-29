@@ -12,7 +12,7 @@ require (
 	go.uber.org/zap v1.24.0
 )
 
-require github.com/bhbosman/goConn v0.0.0-20230328145648-e6bab0984275
+require github.com/bhbosman/goConn v0.0.0-20230328145648-e6bab0984275 // indirect
 
 require (
 	github.com/bhbosman/gocomms v0.0.0-20230329081153-c8a2da884df3 // indirect
