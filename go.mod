@@ -12,8 +12,8 @@ require (
 	go.uber.org/zap v1.24.0
 )
 
-
 require (
+	github.com/bhbosman/goConn v0.0.0-20230328145648-e6bab0984275 // indirect
 	github.com/bhbosman/gocomms v0.0.0-20230329081153-c8a2da884df3 // indirect
 	github.com/bhbosman/goerrors v0.0.0-20220623084908-4d7bbcd178cf // indirect
 	github.com/bhbosman/gomessageblock v0.0.0-20230308173223-e8144f25444c // indirect
