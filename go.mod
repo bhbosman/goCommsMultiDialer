@@ -15,7 +15,6 @@ require (
 )
 
 require (
-	github.com/bhbosman/goConn v0.0.0-20250307232512-5c59bbebe521
 	github.com/bhbosman/gocomms v0.0.0-20230730212408-04ba72ddb372 // indirect
 	github.com/bhbosman/goerrors v0.0.0-20250307194237-312d070c8e38 // indirect
 	github.com/bhbosman/gomessageblock v0.0.0-20250307141417-ab783e8e2eba // indirect
