@@ -11,6 +11,8 @@ github.com/bhbosman/goCommsNetDialer v0.0.0-20250308053613-a763632f1b3d h1:/WRx9
 github.com/bhbosman/goCommsNetDialer v0.0.0-20250308053613-a763632f1b3d/go.mod h1:eSxu4LFVjMNofXp2AgCS9bO0M5Su6OIY2hDADSqbVyY=
 github.com/bhbosman/goCommsNetDialer v0.0.0-20250308072116-e542f85eddcc h1:1EaGhUkQ3uXdOIIc3smaZOM+o1jLgmUh4eQQzG9DT5Y=
 github.com/bhbosman/goCommsNetDialer v0.0.0-20250308072116-e542f85eddcc/go.mod h1:izCaBxAUKQjijpSPRjyS8jmeiYIMw8T3HVHhiWv0W1A=
+github.com/bhbosman/goCommsNetDialer v0.0.0-20250308133838-fcd6077403df h1:dlJGajQZqzwgecnykOwsahhRNNME7ny25nFg3U1NAwo=
+github.com/bhbosman/goCommsNetDialer v0.0.0-20250308133838-fcd6077403df/go.mod h1:+68afJR5b+axbAl3ezCgLnwZK8A3TqmGMcuurukqslg=
 github.com/bhbosman/goConnectionManager v0.0.0-20250308054322-587c786bedb0 h1:XdF25zaOXJb9XZEQ8yWWay/0SsgYvWJF4T7bvpyh76s=
 github.com/bhbosman/goConnectionManager v0.0.0-20250308054322-587c786bedb0/go.mod h1:IPFrgfmxCXp1Vvvzn0VhX+rsLlCfoUIOdowkTvNmYZM=
 github.com/bhbosman/goConnectionManager v0.0.0-20250308072343-5ecf88215e38 h1:82LWGEM9SPvd/mp6T/v/lYm07IypmGtfX8fP5i0cYd4=
