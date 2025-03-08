@@ -4,7 +4,7 @@ go 1.24.0
 
 require (
 	github.com/bhbosman/goCommsDefinitions v0.0.0-20250308144130-64993b60920c
-	github.com/bhbosman/goCommsNetDialer v0.0.0-20250308150315-3655e928859c
+	github.com/bhbosman/goCommsNetDialer v0.0.0-20250308152813-38e19382eb6a
 	github.com/bhbosman/goConnectionManager v0.0.0-20250308150558-5d463bc5c9e3
 	github.com/bhbosman/gocommon v0.0.0-20250308150148-56b7e6e14bff
 	github.com/cskr/pubsub v1.0.2
@@ -13,7 +13,7 @@ require (
 )
 
 require (
-	github.com/bhbosman/gocomms v0.0.0-20250308150300-a1d5009c77b1 // indirect
+	github.com/bhbosman/gocomms v0.0.0-20250308152759-52892cbe374f // indirect
 	github.com/bhbosman/goerrors v0.0.0-20250307194237-312d070c8e38 // indirect
 	github.com/bhbosman/gomessageblock v0.0.0-20250308073733-0b3daca12e3a // indirect
 	github.com/bhbosman/goprotoextra v0.0.2 // indirect
