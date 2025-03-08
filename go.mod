@@ -5,8 +5,8 @@ go 1.23.0
 toolchain go1.24.0
 
 require (
-	github.com/bhbosman/goCommsDefinitions v0.0.0-20250307125227-bfc368fdddf9
-	github.com/bhbosman/goCommsNetDialer v0.0.0-20250307150712-206b023d3816
+	github.com/bhbosman/goCommsDefinitions v0.0.0-20250308000247-4306925b3dfd
+	github.com/bhbosman/goCommsNetDialer v0.0.0-20250307233555-6c2dfa80f01b
 	github.com/bhbosman/goConnectionManager v0.0.0-20250307224538-a79ceb218fd0
 	github.com/bhbosman/gocommon v0.0.0-20250307235859-f370cb0a3bac
 	github.com/cskr/pubsub v1.0.2
@@ -15,7 +15,7 @@ require (
 )
 
 require (
-	github.com/bhbosman/gocomms v0.0.0-20230730212408-04ba72ddb372 // indirect
+	github.com/bhbosman/gocomms v0.0.0-20250308000247-0dafbc2926a9 // indirect
 	github.com/bhbosman/goerrors v0.0.0-20250307194237-312d070c8e38 // indirect
 	github.com/bhbosman/gomessageblock v0.0.0-20250307141417-ab783e8e2eba // indirect
 	github.com/bhbosman/goprotoextra v0.0.2 // indirect
@@ -29,7 +29,6 @@ require (
 	github.com/stretchr/objx v0.5.2 // indirect
 	github.com/stretchr/testify v1.10.0 // indirect
 	github.com/teivah/onecontext v1.3.0 // indirect
-
 	go.uber.org/dig v1.18.1 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
 	golang.org/x/net v0.37.0 // indirect
