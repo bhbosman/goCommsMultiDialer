@@ -4,9 +4,9 @@ go 1.24.0
 
 require (
 	github.com/bhbosman/goCommsDefinitions v0.0.0-20250308144130-64993b60920c
-	github.com/bhbosman/goCommsNetDialer v0.0.0-20250308162151-924d8e82e3d4
-	github.com/bhbosman/goConnectionManager v0.0.0-20250308162041-c3d88e4a7878
-	github.com/bhbosman/gocommon v0.0.0-20250308155359-4baa9bec452e
+	github.com/bhbosman/goCommsNetDialer v0.0.0-20250308194845-d79c1c88c66f
+	github.com/bhbosman/goConnectionManager v0.0.0-20250308194756-b3c21d488492
+	github.com/bhbosman/gocommon v0.0.0-20250308194442-9c45d7859806
 	github.com/cskr/pubsub v1.0.2
 	go.uber.org/fx v1.23.0
 	go.uber.org/zap v1.27.0
