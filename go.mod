@@ -8,7 +8,7 @@ require (
 	github.com/bhbosman/goCommsDefinitions v0.0.0-20250307125227-bfc368fdddf9
 	github.com/bhbosman/goCommsNetDialer v0.0.0-20250307150712-206b023d3816
 	github.com/bhbosman/goConnectionManager v0.0.0-20250307224538-a79ceb218fd0
-	github.com/bhbosman/gocommon v0.0.0-20230507180205-b30f653fb84c
+	github.com/bhbosman/gocommon v0.0.0-20250307235859-f370cb0a3bac
 	github.com/cskr/pubsub v1.0.2
 	go.uber.org/fx v1.23.0
 	go.uber.org/zap v1.27.0

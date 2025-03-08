@@ -27,6 +27,7 @@ github.com/bhbosman/gocommon v0.0.0-20230329101749-40db0f52d859 h1:NCx+ApHbdXn9t
 github.com/bhbosman/gocommon v0.0.0-20230329101749-40db0f52d859/go.mod h1:Om88rcHnwFIos6FEr5346bZM8/7ex5gFZ4/VeX+XoJs=
 github.com/bhbosman/gocommon v0.0.0-20230507180205-b30f653fb84c h1:Gak0cmo63hRuZw3nA9UTbJLu4YUT5zEsYJsI0LCEeKE=
 github.com/bhbosman/gocommon v0.0.0-20230507180205-b30f653fb84c/go.mod h1:psJ00h0jPYAZNqF9kjJio25qy1ra1IKj3zWeCp+tTQg=
+github.com/bhbosman/gocommon v0.0.0-20250307235859-f370cb0a3bac/go.mod h1:EPYuWdqTCX8B9u0Q7w4u4FOalx2wbXm+KFQQbS1VHOo=
 github.com/bhbosman/gocomms v0.0.0-20230329081153-c8a2da884df3 h1:rcyh+75TZ1q3y5bda78CpBMpfSqqRrMm4fASdbZv1JU=
 github.com/bhbosman/gocomms v0.0.0-20230329081153-c8a2da884df3/go.mod h1:XJ+PshUemRQzgLyJa5JHDg8/pFDSuczkxwZwnm3qc/I=
 github.com/bhbosman/gocomms v0.0.0-20230730212408-04ba72ddb372 h1:EtHAc7ZaA2BQm9jPwtVkSAnvsEyRsaU2K1MWd8B+gJE=
